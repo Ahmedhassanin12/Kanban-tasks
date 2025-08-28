@@ -165,3 +165,30 @@ a.secondary {
     filter: invert();
   }
 }
+
+
+.custom-scrollbar::-webkit-scrollbar-corner,
+.layout-pane::-webkit-scrollbar-corner {
+	background: transparent;
+}
+.MuiYearPicker-root::-webkit-scrollbar-track,
+.custom-scrollbar::-webkit-scrollbar-track,
+.layout-pane::-webkit-scrollbar-track {
+	/* box-shadow: inset 0 0 6px #141414; */
+	border-radius: 4px;
+}
+
+.MuiYearPicker-root::-webkit-scrollbar-thumb,
+.custom-scrollbar::-webkit-scrollbar-thumb,
+.layout-pane::-webkit-scrollbar-thumb {
+	background-color: #3e3e3f;
+	border-radius: 4px;
+}
+
+.MuiYearPicker-root::-webkit-scrollbar,
+.layout-pane::-webkit-scrollbar,
+.custom-scrollbar::-webkit-scrollbar {
+	width: 0.5em;
+	height: 0.3em;
+	border-radius: 4px;
+}

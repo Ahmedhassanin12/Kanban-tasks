@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+import { ReactQueryProvider } from "./_Providers/ReactQueryProvider";
+import { KanbanStoreProvider } from "@/modules/kanban/store/KanbanProvider";
+import ThemeRegistry from "./_Providers/ThemeProvider";
+
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -25,7 +30,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+        <ReactQueryProvider >
+          <ThemeRegistry>
+            <KanbanStoreProvider>
+              {children}
+            </KanbanStoreProvider>
+          </ThemeRegistry>
+        </ReactQueryProvider>
+
       </body>
     </html>
   );
