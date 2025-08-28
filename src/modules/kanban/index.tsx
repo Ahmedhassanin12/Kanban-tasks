@@ -15,9 +15,8 @@ import { createPortal } from "react-dom";
 import TaskCard from "./components/TaskCard";
 import { Box } from "@mui/material";
 import ColumnsContainer from "./components/ColumnsContainer";
-import { Column, Task } from "./types/types";
+import { Column } from "./types/types";
 import { DEFAULT_COLUMNS } from "./constants/defaultColumns";
-import { InfiniteData, useQueryClient } from "@tanstack/react-query";
 import { useKanbanStore } from "./store/KanbanProvider";
 import KanbanHeader from "./components/KanbanHeader";
 
@@ -195,7 +194,7 @@ function KanbanBoard() {
                 />
               )}
             </DragOverlay>,
-            document.body
+            document?.body
           )}
         </DndContext>
       </Box>

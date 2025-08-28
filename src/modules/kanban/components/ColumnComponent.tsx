@@ -4,7 +4,7 @@ import ColumnHeader from './ColumnHeader'
 
 import { SortableContext } from "@dnd-kit/sortable";
 import AddIcon from '@mui/icons-material/Add';
-import { useInfiniteQuery, useQuery, } from "@tanstack/react-query";
+import { useQuery, } from "@tanstack/react-query";
 
 import axios from "axios"
 import TaskCard from "./TaskCard";

@@ -1,6 +1,6 @@
 
 import { Box } from "@mui/material";
-import { Column, Id, } from "../types/types";
+import { Column, } from "../types/types";
 import { SortableContext } from "@dnd-kit/sortable";
 import { ColumnComponent } from "./ColumnComponent";
 import { useMemo } from "react";
