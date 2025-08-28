@@ -28,6 +28,8 @@ import KanbanHeader from "./components/KanbanHeader";
 
 
 function KanbanBoard() {
+  const [isMounted, setIsMounted] = useState(false);
+
 
   const [
     tasks,
@@ -151,7 +153,9 @@ function KanbanBoard() {
   }, [flattenedTasks, setTasks]);
 
 
-
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
 
   return (
@@ -185,7 +189,7 @@ function KanbanBoard() {
         >
           <ColumnsContainer columns={columns} />
 
-          {createPortal(
+          {isMounted && typeof document !== "undefined" && createPortal(
             <DragOverlay>
               {activeTask && (
                 <TaskCard
