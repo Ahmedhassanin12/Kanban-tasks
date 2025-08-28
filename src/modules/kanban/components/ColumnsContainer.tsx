@@ -34,7 +34,7 @@ function ColumnsContainer({
             <ColumnComponent
               key={col.id}
               column={col}
-              columnWidth={400}
+              columnWidth={columns.length}
             />
           ))}
         </SortableContext>

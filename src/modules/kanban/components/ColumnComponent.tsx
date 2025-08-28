@@ -101,12 +101,12 @@ export const ColumnComponent = ({ columnWidth, column }: { columnWidth: number, 
         minWidth: {
           xs: "280px",
           md: "340px",
-          lg: `${columnWidth}px`,
+          lg: `375px`,
         },
         width: {
           xs: "280px",
           md: "340px",
-          lg: "100%",
+          lg: `calc(100% / ${columnWidth})`,
         },
         maxWidth: "100%",
         borderRadius: "8px",
@@ -173,7 +173,7 @@ export const ColumnComponent = ({ columnWidth, column }: { columnWidth: number, 
         {error ? <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column" }}><Typography >Something went wrong  </Typography><Button onClick={() => refetch()}>try again</Button></Box> : null}
       </Box>
       {/* Column footer */}
-      <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", pb: 1 }}> <Pagination color="standard" count={data?.pages ?? 1} page={pageNumber} onChange={handleChange} /></Box>
+      <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", py: 1 }}> <Pagination color="standard" count={data?.pages ?? 1} page={pageNumber} onChange={handleChange} /></Box>
 
       <Button
         onClick={() => {
