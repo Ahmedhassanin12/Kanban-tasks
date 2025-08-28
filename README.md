@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Kanban Board (Next.js + JSON Server)
 
-## Getting Started
+A simple **Kanban board application** built with **Next.js** (frontend) and **JSON Server** (mock backend API).  
+Supports **CRUD operations** on tasks and columns, with infinite scroll and drag-and-drop powered by `@dnd-kit`.
 
-First, run the development server:
+---
 
+## 🚀 Features
+
+- ✅ Columns (Todo, In Progress, Done)  
+- ✅ Tasks with title & description  
+- ✅ Full CRUD (Create, Read, Update, Delete)  
+- ✅ JSON Server backend for mock REST API  
+- ✅ pagination task lists with pagination  
+- ✅ Drag & Drop task reordering (`@dnd-kit`)  
+- ✅ Filtering by column  
+
+---
+
+## 🛠️ Tech Stack
+
+- [Next.js](https://nextjs.org/) — React framework  
+- [React Query](https://tanstack.com/query) — Data fetching + caching  
+- [Axios](https://axios-http.com/) — HTTP client  
+- [json-server](https://github.com/typicode/json-server) — Mock backend API  
+- [@dnd-kit](https://dndkit.com/) — Drag & drop  
+
+---
+
+## 📂 Project Structure
+kanban-app/
+├── src/ # Next.js app (UI + logic)
+│ ├── app/
+│ ├── components/
+│ └── modules/
+
+
+---
+
+## ⚡ Getting Started
+
+### 1️⃣ Clone the repo
 ```bash
+git clone https://github.com/Ahmedhassanin12/Kanban-tasks
+cd kanban-app
+npm install
+npx json-server db.json --port 4000
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
